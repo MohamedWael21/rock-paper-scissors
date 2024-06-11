@@ -6,14 +6,55 @@ html {
   height: 100%;
 }
 
+#root {
+  height: 100%;
+}
+
 body {
-  background: radial-gradient(
-    circle at center,
-    rgba(31, 55, 86, 1),
-    rgba(20, 21, 57, 1)
-  );
+  background: radial-gradient(circle at center,
+      rgba(31, 55, 86, 1),
+      rgba(20, 21, 57, 1));
   font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 600;
   font-style: normal;
   height: 100%;
+}
+
+@layer components {
+  .paper {
+    @apply flex items-center justify-center w-[15vh] h-[15vh] rounded-full bg-white border-[2vh] border-blue-500 absolute md:-left-8 -left-4 -top-3 cursor-pointer transition-all ease-in;
+  }
+
+  .paper--hover:hover {
+    @apply shadow-[inset_0_200px_rgba(0,0,0,0.2)] hover:border-[2.5vh] ;
+  }
+
+  .paper {
+    @apply shadow-[inset_0_5px_rgba(0,0,0,0.3)];
+  }
+
+  .scissor {
+    @apply flex items-center justify-center w-[15vh] h-[15vh] rounded-full bg-white border-[2vh]  border-yellow-500 ease-in absolute md:-right-8 -right-4 -top-3 cursor-pointer transition-all;
+  }
+
+  .scissor--hover:hover {
+    @apply shadow-[inset_0_200px_rgba(0,0,0,0.2)] border-[2.5vh];
+  }
+
+  .scissor {
+    @apply shadow-[inset_0_5px_rgba(0,0,0,0.3)];
+  }
+
+  .rock {
+    @apply flex items-center justify-center w-[15vh] h-[15vh] rounded-full bg-white border-[2vh]  border-red-500 absolute bottom-0 left-2/4 -translate-x-2/4 cursor-pointer transition-all ease-in;
+  }
+
+  .rock--hover:hover {
+    @apply shadow-[inset_0_200px_rgba(0,0,0,0.2)] border-[2.5vh]; 
+  }
+
+  .rock {
+    @apply shadow-[inset_0_5px_rgba(0,0,0,0.3)];
+  }
+
 }
