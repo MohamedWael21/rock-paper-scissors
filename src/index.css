@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(
+    circle at center,
+    rgba(31, 55, 86, 1),
+    rgba(20, 21, 57, 1)
+  );
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  height: 100%;
+}
