@@ -1,5 +1,7 @@
+import { useAppContext } from "./AppContext";
 import logo from "./assets/logo.svg";
 const Header = () => {
+  const { score } = useAppContext();
   return (
     <div className="flex items-center justify-between px-5 py-3 md:py-4  text-white border-4 border-gray-500 rounded-lg ">
       <div className="w-[30%] md:w-[18%]">
@@ -10,7 +12,7 @@ const Header = () => {
           Score
         </span>
         <p className="text-[hsl(217,_16%,_45%)] font-bold text-center text-5xl md:text-6xl">
-          12
+          {score}
         </p>
       </div>
     </div>
